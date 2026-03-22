@@ -1,0 +1,526 @@
+[33mcommit b483f139db988f0edf4bc844703ad777093d7290[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: aitktakesh <jtakesh007@gmail.com>
+Date:   Sun Mar 22 10:12:49 2026 +0530
+
+    first commit
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a1b01eb[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,26 @@[m
+[32m+[m[32m# Dependencies[m
+[32m+[m[32mnode_modules/[m
+[32m+[m
+[32m+[m[32m# OS Files[m
+[32m+[m[32m.DS_Store[m
+[32m+[m[32mThumbs.db[m
+[32m+[m[32mDesktop.ini[m
+[32m+[m
+[32m+[m[32m# IDE / Editor[m
+[32m+[m[32m.vscode/[m
+[32m+[m[32m.idea/[m
+[32m+[m[32m*.swp[m
+[32m+[m[32m*.swo[m
+[32m+[m[32m*~[m
+[32m+[m
+[32m+[m[32m# Logs[m
+[32m+[m[32m*.log[m
+[32m+[m[32mnpm-debug.log*[m
+[32m+[m
+[32m+[m[32m# Environment[m
+[32m+[m[32m.env[m
+[32m+[m[32m.env.local[m
+[32m+[m
+[32m+[m[32m# Build output[m
+[32m+[m[32mdist/[m
+[32m+[m[32mbuild/[m
+[1mdiff --git a/CONTRIBUTING.md b/CONTRIBUTING.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..73e9759[m
+[1m--- /dev/null[m
+[1m+++ b/CONTRIBUTING.md[m
+[36m@@ -0,0 +1,57 @@[m
+[32m+[m[32m# Contributing to Task Tracker[m
+[32m+[m
+[32m+[m[32mThanks for your interest in contributing! Here's how to get started.[m
+[32m+[m
+[32m+[m[32m## 🔀 Workflow[m
+[32m+[m
+[32m+[m[32m1. **Fork** the repository[m
+[32m+[m[32m2. **Clone** your fork locally[m
+[32m+[m[32m3. Create a **feature branch** from `main`:[m
+[32m+[m[32m   ```bash[m
+[32m+[m[32m   git checkout -b feature/your-feature-name[m
+[32m+[m[32m   ```[m
+[32m+[m[32m4. Make your changes and **commit** with clear messages:[m
+[32m+[m[32m   ```bash[m
+[32m+[m[32m   git add .[m
+[32m+[m[32m   git commit -m "feat: add dark mode toggle"[m
+[32m+[m[32m   ```[m
+[32m+[m[32m5. **Push** your branch:[m
+[32m+[m[32m   ```bash[m
+[32m+[m[32m   git push origin feature/your-feature-name[m
+[32m+[m[32m   ```[m
+[32m+[m[32m6. Open a **Pull Request** against `main`[m
+[32m+[m
+[32m+[m[32m## 📝 Commit Message Convention[m
+[32m+[m
+[32m+[m[32mUse this format for commit messages:[m
+[32m+[m
+[32m+[m[32m| Prefix   | Use for                     |[m
+[32m+[m[32m|----------|-----------------------------|[m
+[32m+[m[32m| `feat:`  | New features                |[m
+[32m+[m[32m| `fix:`   | Bug fixes                   |[m
+[32m+[m[32m| `docs:`  | Documentation changes       |[m
+[32m+[m[32m| `style:` | Formatting, CSS changes     |[m
+[32m+[m[32m| `refactor:` | Code restructuring       |[m
+[32m+[m[32m| `test:`  | Adding or fixing tests      |[m
+[32m+[m
+[32m+[m[32m**Examples:**[m
+[32m+[m[32m```[m
+[32m+[m[32mfeat: add task categories[m
+[32m+[m[32mfix: prevent empty task submission[m
+[32m+[m[32mdocs: update README with screenshots[m
+[32m+[m[32mstyle: improve mobile layout[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## 🐛 Reporting Bugs[m
+[32m+[m
+[32m+[m[32mOpen an issue with:[m
+[32m+[m[32m- Steps to reproduce[m
+[32m+[m[32m- Expected vs actual behavior[m
+[32m+[m[32m- Browser and OS info[m
+[32m+[m
+[32m+[m[32m## 💡 Suggesting Features[m
+[32m+[m
+[32m+[m[32mOpen an issue tagged `enhancement` with:[m
+[32m+[m[32m- What problem it solves[m
+[32m+[m[32m- How it should work[m
+[32m+[m[32m- Any design mockups (optional)[m
+[1mdiff --git a/GIT_EXERCISES.md b/GIT_EXERCISES.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..55e94df[m
+[1m--- /dev/null[m
+[1m+++ b/GIT_EXERCISES.md[m
+[36m@@ -0,0 +1,355 @@[m
+[32m+[m[32m# 🏋️ Git & GitHub Exercises[m
+[32m+[m
+[32m+[m[32mWork through these 10 exercises using this Task Tracker project. Each exercise builds on the previous one.[m
+[32m+[m
+[32m+[m[32m> **Prerequisites:** Git installed, a GitHub account, and a terminal open in this project folder.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 1: Initialize & First Commit[m
+[32m+[m
+[32m+[m[32m**Skills:** `git init`, `git add`, `git commit`, `git status`[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# 1. Initialize a new Git repository[m
+[32m+[m[32mgit init[m
+[32m+[m
+[32m+[m[32m# 2. Check the status — all files should be untracked[m
+[32m+[m[32mgit status[m
+[32m+[m
+[32m+[m[32m# 3. Stage all files[m
+[32m+[m[32mgit add .[m
+[32m+[m
+[32m+[m[32m# 4. Make your first commit[m
+[32m+[m[32mgit commit -m "feat: initial project setup with task tracker app"[m
+[32m+[m
+[32m+[m[32m# 5. View the commit log[m
+[32m+[m[32mgit log[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** One commit in the log with all project files.[m
+[32m+[m
+[32m+[m[32m**🏆 Bonus:** Try `git add` on individual files instead of using `.` to understand selective staging.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 2: Branching & Feature Work[m
+[32m+[m
+[32m+[m[32m**Skills:** `git branch`, `git checkout` / `git switch`[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# 1. Create and switch to a new branch[m
+[32m+[m[32mgit checkout -b feature/dark-mode-toggle[m
+[32m+[m
+[32m+[m[32m# 2. Add this button to index.html (inside the <header>, after the tagline):[m
+[32m+[m[32m#    <button id="theme-toggle" class="btn">🌙 Toggle Theme</button>[m
+[32m+[m
+[32m+[m[32m# 3. Add this to the bottom of app.js:[m
+[32m+[m[32m#    document.getElementById('theme-toggle').addEventListener('click', () => {[m
+[32m+[m[32m#        document.body.classList.toggle('light-mode');[m
+[32m+[m[32m#    });[m
+[32m+[m
+[32m+[m[32m# 4. Add this to style.css:[m
+[32m+[m[32m#    body.light-mode {[m
+[32m+[m[32m#        --bg-primary: #f0f0f5;[m
+[32m+[m[32m#        --bg-secondary: #e0e0eb;[m
+[32m+[m[32m#        --bg-card: #ffffff;[m
+[32m+[m[32m#        --text-primary: #1a1a2e;[m
+[32m+[m[32m#        --text-secondary: #4a4a5a;[m
+[32m+[m[32m#        --border: #d0d0e0;[m
+[32m+[m[32m#    }[m
+[32m+[m
+[32m+[m[32m# 5. Stage and commit your changes[m
+[32m+[m[32mgit add .[m
+[32m+[m[32mgit commit -m "feat: add dark/light mode toggle"[m
+[32m+[m
+[32m+[m[32m# 6. View all branches[m
+[32m+[m[32mgit branch[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** Two branches — `main` and `feature/dark-mode-toggle`. The toggle button exists only on the feature branch.[m
+[32m+[m
+[32m+[m[32m**🏆 Bonus:** Switch back to `main` with `git checkout main` and notice the toggle is gone, then switch back.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 3: Merging Branches[m
+[32m+[m
+[32m+[m[32m**Skills:** `git merge`, fast-forward merge, `git log --oneline --graph`[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# 1. Switch to main[m
+[32m+[m[32mgit checkout main[m
+[32m+[m
+[32m+[m[32m# 2. Merge the feature branch into main[m
+[32m+[m[32mgit merge feature/dark-mode-toggle[m
+[32m+[m
+[32m+[m[32m# 3. View the merge result[m
+[32m+[m[32mgit log --oneline --graph[m
+[32m+[m
+[32m+[m[32m# 4. Delete the feature branch (it's merged now)[m
+[32m+[m[32mgit branch -d feature/dark-mode-toggle[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** Main now has the dark mode toggle. The feature branch is deleted.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 4: Resolving Merge Conflicts[m
+[32m+[m
+[32m+[m[32m**Skills:** Conflict markers, manual resolution[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# 1. Create two branches from main[m
+[32m+[m[32mgit checkout -b branch-a[m
+[32m+[m[32m# Edit data.json → Change "version" to "2.0.0"[m
+[32m+[m[32mgit add data.json[m
+[32m+[m[32mgit commit -m "chore: bump version to 2.0.0"[m
+[32m+[m
+[32m+[m[32mgit checkout main[m
+[32m+[m[32mgit checkout -b branch-b[m
+[32m+[m[32m# Edit data.json → Change "version" to "3.0.0"[m
+[32m+[m[32mgit add data.json[m
+[32m+[m[32mgit commit -m "chore: bump version to 3.0.0"[m
+[32m+[m
+[32m+[m[32m# 2. Merge branch-a into main[m
+[32m+[m[32mgit checkout main[m
+[32m+[m[32mgit merge branch-a    # ✅ This should succeed (fast-forward)[m
+[32m+[m
+[32m+[m[32m# 3. Now merge branch-b — THIS WILL CONFLICT[m
+[32m+[m[32mgit merge branch-b    # ❌ Conflict![m
+[32m+[m
+[32m+[m[32m# 4. Open data.json — you'll see conflict markers:[m
+[32m+[m[32m#    <<<<<<< HEAD[m
+[32m+[m[32m#    "version": "2.0.0",[m
+[32m+[m[32m#    =======[m
+[32m+[m[32m#    "version": "3.0.0",[m
+[32m+[m[32m#    >>>>>>> branch-b[m
+[32m+[m
+[32m+[m[32m# 5. Manually resolve: pick the version you want (e.g., "3.0.0")[m
+[32m+[m[32m#    Remove ALL conflict markers (<<<, ===, >>>)[m
+[32m+[m
+[32m+[m[32m# 6. Stage and commit the resolution[m
+[32m+[m[32mgit add data.json[m
+[32m+[m[32mgit commit -m "fix: resolve version conflict, set to 3.0.0"[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** Conflict resolved, clean `data.json`, and a merge commit in the log.[m
+[32m+[m
+[32m+[m[32m**🏆 Bonus:** Use `git diff` before staging to see exactly what changed.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 5: Git Log & History[m
+[32m+[m
+[32m+[m[32m**Skills:** `git log`, `git diff`, `git show`, `git blame`[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# 1. View compact log[m
+[32m+[m[32mgit log --oneline[m
+[32m+[m
+[32m+[m[32m# 2. View log with graph[m
+[32m+[m[32mgit log --oneline --graph --all[m
+[32m+[m
+[32m+[m[32m# 3. View a specific commit's details (replace <hash> with a commit hash)[m
+[32m+[m[32mgit show <hash>[m
+[32m+[m
+[32m+[m[32m# 4. Compare two commits[m
+[32m+[m[32mgit diff <hash1> <hash2>[m
+[32m+[m
+[32m+[m[32m# 5. See who wrote each line of a file[m
+[32m+[m[32mgit blame app.js[m
+[32m+[m
+[32m+[m[32m# 6. Search commits by message[m
+[32m+[m[32mgit log --grep="feat"[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** You can navigate commit history, inspect changes, and trace authorship.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 6: Undoing Changes[m
+[32m+[m
+[32m+[m[32m**Skills:** `git reset`, `git revert`, `git stash`[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# --- Scenario A: Unstage a file ---[m
+[32m+[m[32m# 1. Make a change to README.md (add any text)[m
+[32m+[m[32m# 2. Stage it[m
+[32m+[m[32mgit add README.md[m
+[32m+[m[32m# 3. Unstage it[m
+[32m+[m[32mgit restore --staged README.md[m
+[32m+[m
+[32m+[m[32m# --- Scenario B: Discard uncommitted changes ---[m
+[32m+[m[32mgit restore README.md[m
+[32m+[m
+[32m+[m[32m# --- Scenario C: Stash work-in-progress ---[m
+[32m+[m[32m# 1. Make changes to style.css (e.g., change a color)[m
+[32m+[m[32m# 2. Stash the changes[m
+[32m+[m[32mgit stash[m
+[32m+[m[32m# 3. Do something else, then bring them back[m
+[32m+[m[32mgit stash pop[m
+[32m+[m
+[32m+[m[32m# --- Scenario D: Revert a commit ---[m
+[32m+[m[32m# 1. Make a "bad" commit[m
+[32m+[m[32mecho "OOPS" >> README.md[m
+[32m+[m[32mgit add .[m
+[32m+[m[32mgit commit -m "docs: accidental bad change"[m
+[32m+[m[32m# 2. Revert it (creates a new commit that undoes it)[m
+[32m+[m[32mgit revert HEAD[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** You can stage/unstage, stash, and revert changes without losing history.[m
+[32m+[m
+[32m+[m[32m**🏆 Bonus:** Try `git reset --soft HEAD~1` to undo the last commit but keep changes staged.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 7: Push to GitHub[m
+[32m+[m
+[32m+[m[32m**Skills:** Remote repos, `git remote`, `git push`[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# 1. Create a new repository on GitHub (DO NOT initialize with README)[m
+[32m+[m[32m#    Go to: https://github.com/new[m
+[32m+[m
+[32m+[m[32m# 2. Add the remote[m
+[32m+[m[32mgit remote add origin https://github.com/YOUR_USERNAME/task-tracker.git[m
+[32m+[m
+[32m+[m[32m# 3. Push your main branch[m
+[32m+[m[32mgit push -u origin main[m
+[32m+[m
+[32m+[m[32m# 4. Verify on GitHub — all your files should be there![m
+[32m+[m
+[32m+[m[32m# 5. Make a change locally, commit, and push[m
+[32m+[m[32mecho "" >> README.md[m
+[32m+[m[32mgit add .[m
+[32m+[m[32mgit commit -m "docs: test push"[m
+[32m+[m[32mgit push[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** Your project is live on GitHub with full commit history.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 8: Pull Requests & Code Review[m
+[32m+[m
+[32m+[m[32m**Skills:** PRs, branching on GitHub[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# 1. Create a new feature branch[m
+[32m+[m[32mgit checkout -b feature/task-categories[m
+[32m+[m
+[32m+[m[32m# 2. Add a category dropdown to index.html (after the priority select):[m
+[32m+[m[32m#    <select id="task-category" class="task-priority">[m
+[32m+[m[32m#        <option value="general">General</option>[m
+[32m+[m[32m#        <option value="work">Work</option>[m
+[32m+[m[32m#        <option value="personal">Personal</option>[m
+[32m+[m[32m#    </select>[m
+[32m+[m
+[32m+[m[32m# 3. Commit and push the branch[m
+[32m+[m[32mgit add .[m
+[32m+[m[32mgit commit -m "feat: add task categories dropdown"[m
+[32m+[m[32mgit push -u origin feature/task-categories[m
+[32m+[m
+[32m+[m[32m# 4. Go to GitHub → you'll see a prompt to create a Pull Request[m
+[32m+[m[32m# 5. Create the PR with a description of your changes[m
+[32m+[m[32m# 6. Review the "Files changed" tab[m
+[32m+[m[32m# 7. Merge the PR on GitHub[m
+[32m+[m
+[32m+[m[32m# 8. Pull the merged changes locally[m
+[32m+[m[32mgit checkout main[m
+[32m+[m[32mgit pull origin main[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** A merged PR visible on GitHub with the conversation and diff.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 9: Rebasing[m
+[32m+[m
+[32m+[m[32m**Skills:** `git rebase`, interactive rebase[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# 1. Create a branch with multiple small commits[m
+[32m+[m[32mgit checkout -b feature/animations[m
+[32m+[m
+[32m+[m[32m# Commit 1: Add transition to task items[m
+[32m+[m[32m# Edit style.css, save[m
+[32m+[m[32mgit add style.css[m
+[32m+[m[32mgit commit -m "style: add hover transition"[m
+[32m+[m
+[32m+[m[32m# Commit 2: Add fade-in animation[m
+[32m+[m[32m# Edit style.css, save[m
+[32m+[m[32mgit add style.css[m
+[32m+[m[32mgit commit -m "style: add fade-in effect"[m
+[32m+[m
+[32m+[m[32m# Commit 3: Fix typo[m
+[32m+[m[32m# Edit style.css, save[m
+[32m+[m[32mgit add style.css[m
+[32m+[m[32mgit commit -m "fix: typo in animation name"[m
+[32m+[m
+[32m+[m[32m# 2. Squash the 3 commits into 1 using interactive rebase[m
+[32m+[m[32mgit rebase -i HEAD~3[m
+[32m+[m[32m# In the editor:[m
+[32m+[m[32m#   pick  abc1234  style: add hover transition[m
+[32m+[m[32m#   squash  def5678  style: add fade-in effect[m
+[32m+[m[32m#   squash  ghi9012  fix: typo in animation name[m
+[32m+[m[32m# Save and write a combined commit message[m
+[32m+[m
+[32m+[m[32m# 3. Verify[m
+[32m+[m[32mgit log --oneline[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** Three commits are now one clean commit.[m
+[32m+[m
+[32m+[m[32m**🏆 Bonus:** Try rebasing your branch onto `main` instead of merging: `git rebase main`.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## Exercise 10: Tags & Releases[m
+[32m+[m
+[32m+[m[32m**Skills:** `git tag`, annotated tags, GitHub Releases[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32m# 1. Tag the current state as v1.0.0[m
+[32m+[m[32mgit tag -a v1.0.0 -m "Release v1.0.0 - Initial task tracker"[m
+[32m+[m
+[32m+[m[32m# 2. View all tags[m
+[32m+[m[32mgit tag[m
+[32m+[m
+[32m+[m[32m# 3. View tag details[m
+[32m+[m[32mgit show v1.0.0[m
+[32m+[m
+[32m+[m[32m# 4. Push tags to GitHub[m
+[32m+[m[32mgit push origin v1.0.0[m
+[32m+[m[32m# Or push all tags:[m
+[32m+[m[32mgit push --tags[m
+[32m+[m
+[32m+[m[32m# 5. On GitHub → Go to Releases → Create a new release from the tag[m
+[32m+[m[32m#    Add release notes describing what's in this version[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m**✅ Expected:** A tagged release on GitHub that anyone can download.[m
+[32m+[m
+[32m+[m[32m**🏆 Bonus:** Make more changes, then tag as `v1.1.0` to practice versioning.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 🎉 Congratulations![m
+[32m+[m
+[32m+[m[32mYou've practiced the core Git & GitHub workflows that professional developers use daily:[m
+[32m+[m
+[32m+[m[32m| Skill | Exercise |[m
+[32m+[m[32m|-------|----------|[m
+[32m+[m[32m| Repository setup | 1 |[m
+[32m+[m[32m| Branching | 2, 8 |[m
+[32m+[m[32m| Merging | 3, 4 |[m
+[32m+[m[32m| Conflict resolution | 4 |[m
+[32m+[m[32m| History & inspection | 5 |[m
+[32m+[m[32m| Undoing mistakes | 6 |[m
+[32m+[m[32m| Remote collaboration | 7, 8 |[m
+[32m+[m[32m| Rebasing | 9 |[m
+[32m+[m[32m| Releases | 10 |[m
+[32m+[m
+[32m+[m[32m> **Next steps:** Try collaborating with a friend — fork each other's repos, create PRs, and review code![m
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c6fbfee[m
+[1m--- /dev/null[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1,41 @@[m
+[32m+[m[32m# 📋 Task Tracker[m
+[32m+[m
+[32m+[m[32mA simple, elegant task tracker web application — built as a **Git & GitHub practice project**.[m
+[32m+[m
+[32m+[m[32m## 🚀 Features[m
+[32m+[m
+[32m+[m[32m- ✅ Add, complete, and delete tasks[m
+[32m+[m[32m- 🎯 Priority levels (Low, Medium, High)[m
+[32m+[m[32m- 🔍 Filter tasks (All / Active / Completed)[m
+[32m+[m[32m- 💾 Persistent storage via `localStorage`[m
+[32m+[m[32m- 🌙 Modern dark theme UI[m
+[32m+[m
+[32m+[m[32m## 📂 Project Structure[m
+[32m+[m
+[32m+[m[32m```[m
+[32m+[m[32mGit_Project(practice)/[m
+[32m+[m[32m├── index.html          # Main HTML page[m
+[32m+[m[32m├── style.css           # Styles and theme[m
+[32m+[m[32m├── app.js              # Application logic[m
+[32m+[m[32m├── data.json           # Sample data[m
+[32m+[m[32m├── README.md           # This file[m
+[32m+[m[32m├── CONTRIBUTING.md     # Contribution guidelines[m
+[32m+[m[32m├── GIT_EXERCISES.md    # 🏋️ Git practice exercises[m
+[32m+[m[32m└── .gitignore          # Git ignore rules[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## 🛠️ Setup[m
+[32m+[m
+[32m+[m[32m1. Clone or initialize this repo[m
+[32m+[m[32m2. Open `index.html` in your browser[m
+[32m+[m[32m3. Start adding tasks![m
+[32m+[m
+[32m+[m[32m> No build tools or servers needed — it's plain HTML, CSS, and JavaScript.[m
+[32m+[m
+[32m+[m[32m## 🏋️ Git Practice[m
+[32m+[m
+[32m+[m[32mCheck out **[GIT_EXERCISES.md](GIT_EXERCISES.md)** for 10 structured exercises that walk you through real Git/GitHub workflows using this project.[m
+[32m+[m
+[32m+[m[32m## 📜 License[m
+[32m+[m
+[32m+[m[32mThis project is for educational and practice purposes.[m
+[1mdiff --git a/app.js b/app.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..56741cb[m
+[1m--- /dev/null[m
+[1m+++ b/app.js[m
+[36m@@ -0,0 +1,178 @@[m
+[32m+[m[32m// ===== DOM Elements =====[m
+[32m+[m[32mconst taskForm = document.getElementById('task-form');[m
+[32m+[m[32mconst taskInput = document.getElementById('task-input');[m
+[32m+[m[32mconst taskPriority = document.getElementById('task-priority');[m
+[32m+[m[32mconst taskList = document.getElementById('task-list');[m
+[32m+[m[32mconst emptyState = document.getElementById('empty-state');[m
+[32m+[m[32mconst taskCountEl = document.getElementById('task-count');[m
+[32m+[m[32mconst clearCompletedBtn = document.getElementById('clear-completed-btn');[m
+[32m+[m[32mconst filterBtns = document.querySelectorAll('.filter-btn');[m
+[32m+[m
+[32m+[m[32m// 
