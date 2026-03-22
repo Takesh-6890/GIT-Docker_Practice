@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Task Tracker - A mini project to practice Git and GitHub workflows">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">✅</span>
+                <h1>Task Tracker</h1>
+            </div>
+            <p class="tagline">Stay organized. Get things done.</p>
+        </header>
+
+        <main class="app-main">
+            <!-- Add Task Section -->
+            <form id="task-form" class="task-form">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="task-input" 
+                        class="task-input" 
+                        placeholder="What needs to be done?" 
+                        autocomplete="off"
+                        required
+                    >
+                    <select id="task-priority" class="task-priority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button type="submit" id="add-btn" class="btn btn-add">
+                        <span>+</span> Add
+                    </button>
+                </div>
+            </form>
+
+            <!-- Filter Section -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <div class="task-count">
+                    <span id="task-count">0</span> tasks remaining
+                </div>
+            </div>
+
+            <!-- Task List -->
+            <ul id="task-list" class="task-list">
+                <!-- Tasks will be dynamically injected here -->
+            </ul>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-state">
+                <span class="empty-icon">📋</span>
+                <p>No tasks yet. Add one above!</p>
+            </div>
+
+            <!-- Footer Actions -->
+            <div class="footer-actions">
+                <button id="clear-completed-btn" class="btn btn-clear">
+                    Clear Completed
+                </button>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Built for <strong>Git & GitHub</strong> practice 🚀</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

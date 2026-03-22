@@ -1,0 +1,64 @@
+{
+    "projectName": "Task Tracker",
+    "version": "1.0.0",
+    "sampleTasks": [
+        {
+            "id": 1,
+            "text": "Learn git init and git clone",
+            "priority": "high",
+            "completed": false,
+            "category": "git-basics"
+        },
+        {
+            "id": 2,
+            "text": "Practice creating branches",
+            "priority": "high",
+            "completed": false,
+            "category": "branching"
+        },
+        {
+            "id": 3,
+            "text": "Resolve a merge conflict",
+            "priority": "medium",
+            "completed": false,
+            "category": "merging"
+        },
+        {
+            "id": 4,
+            "text": "Push code to GitHub",
+            "priority": "medium",
+            "completed": false,
+            "category": "remote"
+        },
+        {
+            "id": 5,
+            "text": "Create a pull request",
+            "priority": "medium",
+            "completed": false,
+            "category": "collaboration"
+        },
+        {
+            "id": 6,
+            "text": "Try interactive rebase",
+            "priority": "low",
+            "completed": false,
+            "category": "advanced"
+        },
+        {
+            "id": 7,
+            "text": "Tag a release version",
+            "priority": "low",
+            "completed": false,
+            "category": "releases"
+        }
+    ],
+    "categories": [
+        "git-basics",
+        "branching",
+        "merging",
+        "remote",
+        "collaboration",
+        "advanced",
+        "releases"
+    ]
+}
