@@ -176,3 +176,6 @@ function escapeHTML(str) {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
 }
+let a = 10;
+let b = 20;
+console.log(a + b);
